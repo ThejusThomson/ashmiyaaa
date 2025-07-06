@@ -162,7 +162,7 @@ if (positionsRef.current.length === 0) {
 
   return (
     <div className="stars-container">
-      <h1 className="happy-text">Happy Birthday Ashmiyaaaaa 🎉</h1>
+      <h1 className="happy-text">Happiest Birthday to my Cutest Pookie Princess Ashmiyaaaaa! 🎂👑💖</h1>
 
       <h2 className="pick-text shimmer">Pick your favorite star ✨</h2>
 

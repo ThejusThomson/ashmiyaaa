@@ -73,8 +73,8 @@ body {
 
 .star {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #a855f7;
   clip-path: polygon(
     50% 0%, 
@@ -93,9 +93,8 @@ body {
 }
 
 .star:hover {
-  transform: scale(1.7);
+  transform: scale(1.5);
 }
-
 
 .star-flash {
   animation: flash 0.3s ease-out;
@@ -112,8 +111,8 @@ body {
 
 .decor-star {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   opacity: 0.8;
   animation: twinkle ease-in-out infinite alternate;
@@ -135,11 +134,12 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  padding: 10px;
 }
 
 .modal-content {
   background: #222;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   max-width: 90%;
   max-height: 80%;
@@ -157,6 +157,7 @@ body {
   margin-top: 10px;
   font-style: italic;
   color: #d8b4fe;
+  font-size: 1rem;
 }
 
 .glitter-effect {
@@ -174,7 +175,7 @@ body {
 
 .shooting-star {
   position: absolute;
-  width: 120px;
+  width: 100px;
   height: 2px;
   background: linear-gradient(90deg, white, rgba(255, 255, 255, 0));
   opacity: 0.8;
@@ -187,27 +188,57 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translate(300px, 300px) rotate(45deg);
+    transform: translate(250px, 250px) rotate(45deg);
     opacity: 0;
   }
 }
+
 .happy-text {
   text-align: center;
   margin-top: 10px;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #f5d0fe;
   animation: shimmer 2.5s infinite alternate;
+  padding: 0 15px;
 }
 
 .permanent-photo {
   position: absolute;
-  top: 35%;
-  left: 42%;
-  height: 50vh;
+  top: 36%;
+  left: 40%;
+  /* height: 50vh; */
+  max-height: 400px;
   transform: translate(-50%, -50%);
   object-fit: cover;
   border-radius: 20px;
   z-index: 0;
 }
 
+/* --- Mobile adjustments --- */
+@media (max-width: 600px) {
+  .happy-text {
+    font-size: 1.4rem;
+  }
+  
+  .pick-text {
+    font-size: 1.2rem;
+  }
 
+  .music-button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    max-height: 450px;
+  }
+
+  .permanent-photo {
+    height: 40vh;
+    max-height: 320px;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
